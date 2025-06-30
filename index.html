@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Baixe o app 95 MOTOCAR para Android ou iPhone. Mobilidade urbana rápida e confiável."
+    />
+    <meta name="robots" content="index, follow" />
+    <title>95 MOTOCAR | Baixe o App Oficial</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #1e3c72, #2a5298);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .container {
+        background: rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+        padding: 40px 30px;
+        max-width: 400px;
+        width: 100%;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      .logo {
+        width: 120px;
+        margin-bottom: 20px;
+        border-radius: 12px;
+      }
+
+      h1 {
+        font-size: 1.9rem;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 1.1rem;
+        margin-bottom: 25px;
+        color: #f0f0f0;
+      }
+
+      .btn {
+        display: block;
+        width: 100%;
+        margin: 12px 0;
+        padding: 14px 0;
+        font-size: 1.1rem;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+        transition: 0.3s ease;
+      }
+
+      .btn-android {
+        background: #3ddc84;
+        color: #000;
+      }
+
+      .btn-ios {
+        background: #0a84ff;
+        color: #fff;
+      }
+
+      .btn-contact {
+        background: #ffc107;
+        color: #000;
+      }
+
+      .btn:hover {
+        transform: scale(1.03);
+        opacity: 0.9;
+      }
+
+      footer {
+        margin-top: 20px;
+        font-size: 0.85rem;
+        opacity: 0.6;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <img
+        class="logo"
+        src="https://i.imgur.com/OtJ6eEk.png"
+        alt="Logo 95 MOTOCAR"
+      />
+
+      <h1>Baixe o app 95 MOTOCAR</h1>
+      <p>
+        Seu transporte rápido, seguro e acessível. Disponível para Android e
+        iPhone.
+      </p>
+
+      <a id="btn-android" class="btn btn-android" href="#"
+        >Baixar para Android</a
+      >
+      <a id="btn-ios" class="btn btn-ios" href="#">Baixar para iPhone</a>
+      <a
+        class="btn btn-contact"
+        href="https://wa.me/553436629595"
+        target="_blank"
+        >Entrar em contato</a
+      >
+
+      <footer>© 2025 95 MOTOCAR - Todos os direitos reservados</footer>
+    </div>
+
+    <script>
+      const androidLink =
+        "https://play.google.com/store/apps/details?id=br.com.devbase.novecincomotocar";
+      const iosLink = "https://apps.apple.com/us/app/95-motocar/id6446031981";
+
+      const isAndroid = /android/i.test(navigator.userAgent);
+      const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+
+      document.getElementById("btn-android").href = androidLink;
+      document.getElementById("btn-ios").href = iosLink;
+
+      // Redirecionamento automático
+      setTimeout(() => {
+        if (isAndroid) {
+          window.location.href = androidLink;
+        } else if (isIOS) {
+          window.location.href = iosLink;
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>
