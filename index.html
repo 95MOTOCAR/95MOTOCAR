@@ -2,7 +2,7 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>95 MOTOCAR - Baixe o App</title>
     <meta
       name="description"
@@ -19,19 +19,17 @@
         --text: #f5f5f5;
         --accent: #25d366;
       }
-
       * {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
       }
-
       body {
         font-family: "Outfit", sans-serif;
         background: var(--bg);
         color: var(--text);
+        min-height: 100vh;
       }
-
       .hero-bg {
         height: 280px;
         background-image: url("95-logo-sem-fundo.png");
@@ -45,7 +43,6 @@
           rgba(0, 0, 0, 0.1)
         );
       }
-
       .content {
         padding: 30px 20px 40px;
         display: flex;
@@ -53,14 +50,12 @@
         align-items: center;
         text-align: center;
       }
-
       h1 {
         font-size: 2rem;
         font-weight: 700;
         color: var(--primary);
         margin: 20px 0 12px;
       }
-
       p {
         color: #ccc;
         font-size: 1.1rem;
@@ -68,14 +63,12 @@
         line-height: 1.5;
         padding: 0 10px;
       }
-
       .highlight {
         font-size: 1.3rem;
         font-weight: 700;
         color: var(--primary);
         margin-bottom: 24px;
       }
-
       .btn {
         width: 90%;
         max-width: 400px;
@@ -90,40 +83,33 @@
         align-items: center;
         justify-content: center;
         gap: 10px;
+        cursor: pointer;
       }
-
       .btn img {
         height: 24px;
       }
-
       .btn-android {
         background: var(--primary);
         color: #000;
       }
-
       .btn-android:hover {
         background: #8dc61f;
         color: #fff;
       }
-
       .btn-ios {
         background: #fff;
         color: #000;
       }
-
       .btn-ios:hover {
         background: #eaeaea;
       }
-
       .btn-contact {
         background: var(--accent);
         color: #fff;
       }
-
       .btn-contact:hover {
         background: #1aa652;
       }
-
       footer {
         text-align: center;
         padding: 20px 10px;
@@ -134,41 +120,60 @@
   </head>
   <body>
     <div class="hero-bg"></div>
-    <div class="content">
+    <div class="content" id="mainContent">
       <h1>95 MOTOCAR</h1>
       <p>Corridas e Delivery em um só aplicativo. Fácil, rápido e seguro.</p>
       <div class="highlight">📲 Baixe agora!</div>
 
-      <!-- Android -->
       <a
         href="https://play.google.com/store/apps/details?id=br.com.devbase.novecincomotocar"
         class="btn btn-android"
         target="_blank"
+        rel="noopener noreferrer"
       >
         <img src="icone-play-store.png" alt="Play Store" />
         Baixar no Android
       </a>
 
-      <!-- iOS -->
       <a
         href="https://apps.apple.com/us/app/95-motocar/id6446031981"
         class="btn btn-ios"
         target="_blank"
+        rel="noopener noreferrer"
       >
         <img src="icone-apple-store.png" alt="App Store" />
         Baixar no iPhone
       </a>
 
-      <!-- WhatsApp -->
       <a
         href="https://wa.me/553436629595"
         class="btn btn-contact"
         target="_blank"
+        rel="noopener noreferrer"
       >
         <img src="icone-whatsapp.png" alt="WhatsApp" />
         Entrar em contato
       </a>
     </div>
     <footer>© 2025 95 MOTOCAR - Todos os direitos reservados</footer>
+
+    <script>
+      (function () {
+        const userAgent =
+          navigator.userAgent || navigator.vendor || window.opera;
+
+        const googlePlayURL =
+          "https://play.google.com/store/apps/details?id=br.com.devbase.novecincomotocar";
+        const appStoreURL =
+          "https://apps.apple.com/us/app/95-motocar/id6446031981";
+
+        if (/android/i.test(userAgent)) {
+          window.location.replace(googlePlayURL);
+        } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+          window.location.replace(appStoreURL);
+        }
+        // Para outros dispositivos, não redireciona e mostra a página normalmente
+      })();
+    </script>
   </body>
 </html>
