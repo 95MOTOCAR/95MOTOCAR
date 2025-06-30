@@ -18,7 +18,6 @@
         --bg: #0d0d0d;
         --text: #f5f5f5;
         --accent: #25d366;
-        --max-width: 460px;
       }
 
       * {
@@ -31,29 +30,14 @@
         font-family: "Outfit", sans-serif;
         background: var(--bg);
         color: var(--text);
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        padding: 40px 20px;
-        min-height: 100vh;
-      }
-
-      .container {
-        width: 100%;
-        max-width: var(--max-width);
-        background: linear-gradient(180deg, #1e1e1e, #121212);
-        border-radius: 18px;
-        box-shadow: 0 0 30px rgba(164, 235, 47, 0.25);
-        overflow: hidden;
-        text-align: center;
       }
 
       .hero-bg {
-        height: 360px;
+        height: 280px;
         background-image: url("95-logo-sem-fundo.png");
         background-size: contain;
         background-repeat: no-repeat;
-        background-position: center center;
+        background-position: center;
         background-color: #0d0d0d;
         mask-image: linear-gradient(
           to bottom,
@@ -63,14 +47,15 @@
       }
 
       .content {
-        padding: 20px 25px 40px;
+        padding: 30px 20px 40px;
         display: flex;
         flex-direction: column;
         align-items: center;
+        text-align: center;
       }
 
       h1 {
-        font-size: 2.2rem;
+        font-size: 2rem;
         font-weight: 700;
         color: var(--primary);
         margin: 20px 0 12px;
@@ -79,8 +64,9 @@
       p {
         color: #ccc;
         font-size: 1.1rem;
-        margin-bottom: 24px;
+        margin-bottom: 20px;
         line-height: 1.5;
+        padding: 0 10px;
       }
 
       .highlight {
@@ -91,10 +77,11 @@
       }
 
       .btn {
-        width: 100%;
-        padding: 16px 20px;
+        width: 90%;
+        max-width: 400px;
+        padding: 14px 18px;
         margin-bottom: 16px;
-        font-size: 1.1rem;
+        font-size: 1.05rem;
         font-weight: 600;
         border-radius: 14px;
         text-decoration: none;
@@ -102,12 +89,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 12px;
+        gap: 10px;
       }
 
       .btn img {
-        height: 26px;
-        margin-right: 8px;
+        height: 24px;
       }
 
       .btn-android {
@@ -140,62 +126,49 @@
 
       footer {
         text-align: center;
-        padding: 18px;
+        padding: 20px 10px;
         font-size: 0.85rem;
         color: #888;
-      }
-
-      @media (min-width: 600px) {
-        .container {
-          max-width: 520px;
-        }
-
-        .btn {
-          font-size: 1.2rem;
-          padding: 18px;
-        }
       }
     </style>
   </head>
   <body>
-    <div class="container">
-      <div class="hero-bg"></div>
-      <div class="content">
-        <h1>95 MOTOCAR</h1>
-        <p>Corridas e Delivery em um só aplicativo. Fácil, rápido e seguro.</p>
-        <div class="highlight">📲 Baixe agora!</div>
+    <div class="hero-bg"></div>
+    <div class="content">
+      <h1>95 MOTOCAR</h1>
+      <p>Corridas e Delivery em um só aplicativo. Fácil, rápido e seguro.</p>
+      <div class="highlight">📲 Baixe agora!</div>
 
-        <!-- Android -->
-        <a
-          href="https://play.google.com/store/apps/details?id=br.com.devbase.novecincomotocar"
-          class="btn btn-android"
-          target="_blank"
-        >
-          <img src="icone-play-store.png" alt="Play Store" />
-          Baixar no Android
-        </a>
+      <!-- Android -->
+      <a
+        href="https://play.google.com/store/apps/details?id=br.com.devbase.novecincomotocar"
+        class="btn btn-android"
+        target="_blank"
+      >
+        <img src="icone-play-store.png" alt="Play Store" />
+        Baixar no Android
+      </a>
 
-        <!-- iOS -->
-        <a
-          href="https://apps.apple.com/us/app/95-motocar/id6446031981"
-          class="btn btn-ios"
-          target="_blank"
-        >
-          <img src="icone-apple-store.png" alt="App Store" />
-          Baixar no iPhone
-        </a>
+      <!-- iOS -->
+      <a
+        href="https://apps.apple.com/us/app/95-motocar/id6446031981"
+        class="btn btn-ios"
+        target="_blank"
+      >
+        <img src="icone-apple-store.png" alt="App Store" />
+        Baixar no iPhone
+      </a>
 
-        <!-- WhatsApp -->
-        <a
-          href="https://wa.me/553436629595"
-          class="btn btn-contact"
-          target="_blank"
-        >
-          <img src="icone-whatsapp.png" alt="WhatsApp" />
-          Entrar em contato
-        </a>
-      </div>
-      <footer>© 2025 95 MOTOCAR - Todos os direitos reservados</footer>
+      <!-- WhatsApp -->
+      <a
+        href="https://wa.me/553436629595"
+        class="btn btn-contact"
+        target="_blank"
+      >
+        <img src="icone-whatsapp.png" alt="WhatsApp" />
+        Entrar em contato
+      </a>
     </div>
+    <footer>© 2025 95 MOTOCAR - Todos os direitos reservados</footer>
   </body>
 </html>
