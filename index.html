@@ -31,7 +31,7 @@
         min-height: 100vh;
       }
       .hero-bg {
-        height: 280px;
+        height: 200px; /* DIMINUÍDO de 280px para 200px */
         background-image: url("95-logo-sem-fundo.png");
         background-size: contain;
         background-repeat: no-repeat;
@@ -167,12 +167,20 @@
         const appStoreURL =
           "https://apps.apple.com/us/app/95-motocar/id6446031981";
 
+        let targetURL = "";
+
         if (/android/i.test(userAgent)) {
-          window.location.replace(googlePlayURL);
+          targetURL = googlePlayURL;
         } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-          window.location.replace(appStoreURL);
+          targetURL = appStoreURL;
         }
-        // Para outros dispositivos, não redireciona e mostra a página normalmente
+
+        // Redireciona após 2 segundos, se um destino foi detectado
+        if (targetURL) {
+          setTimeout(() => {
+            window.location.href = targetURL;
+          }, 2000);
+        }
       })();
     </script>
   </body>
