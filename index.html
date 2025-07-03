@@ -31,7 +31,7 @@
         min-height: 100vh;
       }
       .hero-bg {
-        height: 200px; /* DIMINUÍDO de 280px para 200px */
+        height: 200px; /* Reduzido */
         background-image: url("95-logo-sem-fundo.png");
         background-size: contain;
         background-repeat: no-repeat;
@@ -175,10 +175,10 @@
           targetURL = appStoreURL;
         }
 
-        // Redireciona após 2 segundos, se um destino foi detectado
+        // Redirecionamento com histórico preservado
         if (targetURL) {
           setTimeout(() => {
-            window.location.href = targetURL;
+            window.location.assign(targetURL);
           }, 2000);
         }
       })();
